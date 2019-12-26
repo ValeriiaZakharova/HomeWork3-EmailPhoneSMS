@@ -33,6 +33,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         user = Storage()
+        makeUI()
         
         if let name = user?.makeUser1().name {
             firstUserNameLabel.text = name
@@ -175,7 +176,20 @@ extension SecondViewController: MFMessageComposeViewControllerDelegate {
 extension SecondViewController {
     
     func makeUI() {
-    
         
+        firstUserPhoto.layer.cornerRadius = firstUserPhoto.frame.width / 2
+        firstUserPhoto.layer.borderColor = UIColor.white.cgColor
+        firstUserPhoto.layer.borderWidth = 1
+        firstUserPhoto.clipsToBounds = true
+        
+        secondUserPhoto.layer.cornerRadius = secondUserPhoto.frame.width / 2
+         secondUserPhoto.layer.borderColor = UIColor.white.cgColor
+         secondUserPhoto.layer.borderWidth = 1
+         secondUserPhoto.clipsToBounds = true
+        
+        thirdUserPhoto.layer.cornerRadius = thirdUserPhoto.frame.width / 2
+         thirdUserPhoto.layer.borderColor = UIColor.white.cgColor
+         thirdUserPhoto.layer.borderWidth = 1
+         thirdUserPhoto.clipsToBounds = true
     }
 }
